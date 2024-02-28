@@ -1,0 +1,5 @@
+val month = "(JAN|FEB|MAR|APR|MAY|JUN|JUL|AUG|SEP|OCT|NOV|DEC)"
+
+fun getPattern(): String = """\d{2} $month \d{4}"""
+
+code ini mengajarkan untuk meng format angka dengan fun getPattern, dimana \d(2) untuk mengformat 2 digit, $month untuk mengambil value month, \d(4) untuk mengformat digit 4 angka
