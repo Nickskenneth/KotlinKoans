@@ -1,0 +1,18 @@
+fun sendMessageToClient(
+        client: Client?, message: String?, mailer: Mailer
+) {
+    val email = client?.personalInfo?.email
+    if (email != null && message != null) {
+        mailer.sendMessage(email, message)
+    }
+}
+
+class Client(val personalInfo: PersonalInfo?)
+class PersonalInfo(val email: String?)
+interface Mailer {
+    fun sendMessage(email: String, message: String)
+}
+
+fungsi sendMessageToClient berfungsi untuk mengirim pesan ke klien. fungsi ini mengambil 3 parameter: client, message, mailer. 
+personal info client itu nullable maka dari itu diberi tanda ? agar jika nilainya null tetap bisa jalan dan tidak eror
+lalu if nya mengecek jika email yang dituju dan message tidak null, maka send email
