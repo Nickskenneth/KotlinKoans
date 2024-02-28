@@ -1,0 +1,12 @@
+fun foo(name: String, number: Int = 42, toUpperCase: Boolean = false) =
+        (if (toUpperCase) name.uppercase() else name) + number
+
+fun useFoo() = listOf(
+        foo("a"),
+        foo("b", number = 1),
+        foo("c", toUpperCase = true),
+        foo(name = "d", number = 2, toUpperCase = true)
+)
+
+
+  case diatas awalnya isi dari function foo salah karena deklarasi yang salah. so instead of mengulang isi function, kita mmebuat deklarasi baru yang mencakup semua isi funciton foo ktia sebelumnya dengan menggunakan deklarasi default
