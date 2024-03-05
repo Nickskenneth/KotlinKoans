@@ -1,0 +1,5 @@
+fun containsEven(collection: Collection<Int>): Boolean =
+        collection.any { it % 2 == 0 }
+
+lambda function dapat memudahkan dalam penulisan menjadikannya lebih ringkas.
+code diatas mengecek semua elemen pada collection, apakah elemen itu genap atau ganjil
